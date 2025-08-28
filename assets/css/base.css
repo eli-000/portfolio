@@ -180,9 +180,9 @@ a:hover {
   left: 0;
   width: 4rem;
   height: 200%;
-  background-image: url("../img/frame.svg");
   background-size: 100% auto;
   background-repeat: repeat-y;
+  background-image: url("../img/frame.svg");
 }
 .wrapper:before {
   animation: frameAnime1 1s linear infinite;
