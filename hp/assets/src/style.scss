@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.dark {
+  .fv svg {
+    fill: #f2f2f2;
+  }
+  .switch div{
+    transform: translateX(-20px);
+  }
+}
+
+.transition {
+  @apply transition-all ease-in-out duration-500;
+}
+
+
+.wrapper {
+  @apply transition-all ease-in-out duration-500;
+  filter: blur(8px);
+  opacity: 0;
+  &.ready {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+.anime {
+  filter: blur(8px);
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: all .5s ease-in-out;
+  transition-duration: .8s;
+}
+.show {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+header {
+  @apply p-5 md:p-10;
+}
+footer {
+  @apply border-t overflow-hidden;
+}
+
+.switch {
+  width: 20px;
+  overflow: hidden;
+  div {
+    @apply transition-all ease-in-out duration-500;
+  }
+}
+
+.main {
+  @apply pt-32 md:pt-40;
+}
+
+
+.EN-16N-100 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+.EN-16N-200 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 2;
+  letter-spacing: 0.1em;
+}
+.EN-14N-200 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  line-height: 2;
+  letter-spacing: 0.1em;
+}
+.EN-14N-100 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+.EN-12N-100 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+.JP-16N-200 {
+  font-family: "Zen Kaku Gothic New", serif;
+  font-size: 1rem;
+  line-height: 2;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+.JP-14N-200 {
+  font-family: "Zen Kaku Gothic New", serif;
+  font-size: 0.875rem;
+  line-height: 2;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+.article-l {
+  @apply max-w-[2000px] mx-auto p-5 md:p-10;
+}
+.article-m {
+  @apply max-w-[944px] mx-auto p-5 md:p-10;
+}
+.archives {
+  @apply grid grid-cols-2;
+  .archive {
+    &:nth-child(1) {
+      @apply col-span-2;
+    }
+    &:nth-child(2) {
+      @apply col-span-2;
+    }
+    &:nth-child(3), &:nth-child(5) {
+      @apply border-r;
+    }
+}
+
+}
+.archive {
+  @apply p-5 md:p-10 relative w-full border-b cursor-pointer hover:bg-gray-800 hover:text-gray-50 dark:hover:bg-white dark:hover:text-black;
+  a {
+    @apply absolute inset-0 w-full h-full z-10;
+  }
+}
+
+.archive_contents {
+  @apply JP-16N-200;
+  .archive_text {
+     @apply my-10 md:my-14;
+    h3 {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.archive_text {
+ @apply mt-4 md:mt-8;
+  h3 {
+    @apply mb-4;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+}
+
+.archive_nav {
+  @apply md:flex;
+  .archive {
+    @apply border;
+    &:nth-child(2) {
+      @apply border-t-0 md:border-l-0 md:border-t;
+    } 
+    img {
+      @apply aspect-square object-cover w-full h-full;
+    }
+  }
+}
+
+
+
+.dl-list {
+  > li {
+    @apply mb-8 last:mb-0 pb-8 border-b;
+  }
+  dl {
+    @apply md:flex;
+    dt {
+      @apply w-48 flex-shrink-0 font-bold mb-4 md:mb-0;
+    }
+  }
+  .list-disc {
+      @apply ml-6;
+      li {
+        @apply mb-2 last:mb-0;
+      }
+  }
+}
+
