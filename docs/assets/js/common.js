@@ -1,15 +1,22 @@
 //transition
 const transition = document.querySelector(".wrapper");
 
-window.addEventListener("load", () => {
+window.addEventListener("pageshow", () => {
   transition.classList.add("ready");
 });
 
 document.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", e => {
-    const target = e.currentTarget.getAttribute("href");
 
-    if (!target || target.startsWith("#")) return;
+    if (link.target === "_blank") return;
+
+    const target = link.getAttribute("href");
+
+    const currentPath = window.location.pathname.split("/").pop();
+    const targetPath = target ? target.split("#")[0] : "";
+    const isAnchor = !target || target.startsWith("#") || targetPath === currentPath;
+
+    if (isAnchor) return;
 
     e.preventDefault();
     transition.classList.remove("ready");
@@ -18,7 +25,11 @@ document.querySelectorAll("a").forEach(link => {
       window.location.href = target;
     }, 500);
   });
-});  
+});
+
+
+
+
 
 // Dark mode
 document.addEventListener("DOMContentLoaded", () => {
