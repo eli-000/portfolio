@@ -596,6 +596,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .ml-4 {
   margin-left: 1rem;
 }
@@ -604,8 +608,16 @@ video {
   margin-right: 1rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .inline-block {
   display: inline-block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -950,6 +962,15 @@ footer {
     h3 {
       font-size: 1.125rem;
     }
+    p a {
+      display: inline;
+    }
+    p a {
+      text-decoration-line: underline;
+    }
+    p a:hover {
+      text-decoration-line: none;
+    }
   }
 }
 
@@ -1062,6 +1083,10 @@ footer {
       margin-bottom: 0px;
     }
   }
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 .hover\:line-through:hover {

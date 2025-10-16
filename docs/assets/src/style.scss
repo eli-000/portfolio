@@ -146,6 +146,9 @@ footer {
     h3 {
       font-size: 1.125rem;
     }
+    p a {
+      @apply underline inline hover:no-underline;
+    }
   }
 }
 

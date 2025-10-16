@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "tailwind": "npx tailwindcss -i ./hp/assets/src/style.scss -o ./hp/assets/css/style.css --watch"
+    "tailwind": "npx tailwindcss -i ./docs/assets/src/style.scss -o ./docs/assets/css/style.css --watch"
   },
   "keywords": [],
   "author": "",
